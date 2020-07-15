@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表格隔行变色</title>
+		<style>
+			table {
+				width: 800px;
+				margin: 100px auto;
+				text-align: center;
+				border-collapse: collapse;  /*表格的边框合并*/
+				font-size: 14px;
+				
+			}
+			thead th {
+				height: 30px;
+				background-color: cornflowerblue;
+			}
+			 tr{
+				border-bottom: 1px solid #999;
+				height: 30px;
+			}
+			.bg {
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+			<tr>
+				<th>代码</th>
+				<th>名称</th>
+				<th>最新公布净值</th>
+				<th>累计净值</th>
+				<th>前单位净值</th>
+				<th>净值增长率</th>
+				<th>公布时间</th>
+				<th>基金规模</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>003526</td>
+				<td>农银金债</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+			</tr>
+			<tr>
+				<td>003526</td>
+				<td>农银金债</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+			</tr>
+			<tr>
+				<td>003526</td>
+				<td>农银金债</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+			</tr>
+			<tr>
+				<td>003526</td>
+				<td>农银金债</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+			</tr>
+			<tr>
+				<td>003526</td>
+				<td>农银金债</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+				<td>1.075</td>
+			</tr>
+			</tbody>
+			<script>
+				var trs = document.querySelector('tbody').querySelectorAll('tr');
+				console.log(trs);
+				
+					for(var i=0;i<trs.length;i++) {
+						
+						trs[i].onmouseover = function() {
+//						this.className = 'bg';
+					    this.style.backgroundColor = 'red';
+					}
+								
+						trs[i].onmouseout = function() {
+//						this.className = '';
+						this.style.backgroundColor = '';
+					}
+				}
+//					注意两种方式不能混用,要么都用第一种,要么都用第二种
+			</script>
+		</table>
+	</body>
+</html>
